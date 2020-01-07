@@ -14,13 +14,14 @@ public class AgeActivity extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_age);
         findViewById(R.id.next).setOnClickListener(this);
-        EditText edAge = findViewById(R.id.age);
-        String age = edAge.getText().toString();
+
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this,SharedPreferences.class);
+        EditText edAge = findViewById(R.id.age);
+        String age = edAge.getText().toString();
+        Intent intent = new Intent(this,GenderActivity.class);
         startActivity(intent);
     }
 }
